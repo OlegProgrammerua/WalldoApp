@@ -1,0 +1,572 @@
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body{
+  background-color: rgb(127, 102, 102);
+  overflow-x: hidden ;
+  
+}
+
+.header{
+  width: 100%;
+  height: 80px;
+  background-color: brown;
+  box-shadow: 2px 2px 5px rgb(65, 57, 57);
+  align-items: center;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+
+.header h1{
+  font-size: 48px;
+}
+
+.header_link{
+  font-size:40px;
+  color: #000;
+  text-decoration: none;
+}
+
+.game{
+  overflow: hidden;
+ 
+}
+
+.game_main{
+  overflow-x: hidden;
+  
+}
+
+.link_leadership{
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  transition:all .5s ease-in-out;
+}
+
+.link_leadership:hover{
+  transform: scale(1.3);
+  color: #fff;
+}
+
+.main{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  overflow-y: hidden;
+  flex-direction: column;
+}
+
+.start_button{
+  display: block;
+  height: 50px;
+  width: 200px;
+  border-radius: 20px;
+  font-weight: 700;
+  background-color: rgb(59, 59, 186);
+  cursor: pointer;
+  border: none;
+  transition: all .5s ease-in-out;
+}
+
+.start_button:hover{
+  transform: scale(1.1);
+  background-color: red;
+  color:#fff;
+  
+
+}
+
+.game_header{
+  width: 100%;
+  max-height: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  position:absolute;
+}
+
+.timer{
+  font-size:24px;
+}
+
+.waldo_image{
+  width: 100%;
+  min-height: 100vh;
+  cursor:url('./components/GameComponents/crosshair.png'), crosshair;
+ 
+}
+
+.waldo_icon{
+  width:100%;
+  max-width: 120px;
+  height: 80%;
+  max-height: 50px;
+}
+
+.inner_bar{
+  display: flex;
+
+}
+
+.Image_item{
+  width: 100%;
+  margin-left: 20px;
+}
+
+.Image_item:first-child{
+  margin-left: 0;
+}
+
+.Image_item:last-child{
+  margin-right: 10px;
+}
+
+.cursor_div{
+  display: block;
+  height: max-content;
+  background-color: gray;
+  border-radius: 30px;
+}
+.item_circle{
+  max-width: 100%;
+  width:100px;
+  max-height:100% ;
+  height: 100px;
+ border-radius: 100%;
+  background-color: rgb(86, 74, 74);
+  opacity: 0.8;
+  overflow: hidden;
+  
+}
+
+.item_button{
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  height: min-content;
+  text-align: center;
+  transition: all .5s ease-in-out;
+  border-radius: inherit;
+  cursor: pointer;
+  
+}
+
+.item_button:hover{
+  background-color: rgb(233, 219, 219);
+}
+
+
+.item_button img{
+  margin-right: 5px;
+  border-radius: 10px;
+
+}
+
+.item_button div{
+  font-size: 20px;
+  margin-top: 10px;
+  
+}
+
+.error_div{
+  position: fixed;
+  left: 40%;
+  top:30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 50px;
+  background-color: rgb(198, 71, 71);
+  z-index: 0;
+  border-radius: 30px;
+  color: white;
+  transition: all .5s ease-in-out;
+  
+}
+
+.no_error_div{
+  top:-100%;
+}
+
+.error_div div{
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+
+
+.waldo_img:first-child{
+  margin-left: 10px;
+}
+
+.inner_bar{
+ 
+  display: flex;
+  height: 30px;
+  align-items: center;
+ 
+}
+
+.inner_bar h3{
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.waldo_img{
+  margin-right:5px ;
+  transition: all .5s ease-in-out;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.waldo_img img{
+  max-width: 50px;
+  
+  height: 50px;
+  border-radius: 10px;
+}
+
+.waldo_name{
+  margin-top:10px;
+  margin-right: 5px;
+  margin-left:5px;
+  font-size: 24px;
+}
+
+.waldo_photo{
+  position: relative;
+  overflow: hidden;
+}
+
+.done_cross_1.done{
+  transform: rotate(45deg) scale(1);
+}
+.done_cross_2.done{
+  transform: rotate(-45deg) scale(1);
+}
+
+
+
+
+.done_cross_1{
+  position: absolute;
+  content:'';
+  width: 125px;
+  transform: rotate(45deg) scaleY(0);
+  background-color: red;
+  height: 5px;
+  top: 0;
+  right: -20px;
+  transition: all .5s ease-in-out;
+  
+}
+.done_cross_2{
+  position: absolute;
+  content:'';
+  width: 125px;
+  transform: rotate(-45deg) scaleY(0);
+  background-color: red;
+  height: 5px;
+  top: 0;
+  left: -20px;
+  transition: all .5s ease-in-out;
+  
+}
+
+
+
+/* name field */
+
+.name_field{
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  max-height: 150px;
+  position: fixed;
+  margin: 0 20px;
+  background-color: rgb(108, 36, 36);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction:column ;
+  justify-content: center;
+  border-radius: 50px;
+  transform: scale(0);
+}
+
+.name_field h1{
+  font-size:24px
+}
+
+.name_field input{
+  width: 100%;
+  max-width: 250px;
+  max-height: 30px;
+  margin-top: 20px;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 15px;
+}
+
+.name_field input:focus{
+  outline: none;
+}
+
+.button_submit{
+  margin-top:15px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  padding: 8px 15px ;
+  cursor: pointer;
+  background-color: rgb(83, 83, 240);
+  transition: all .5s ease-in-out;
+}
+
+.button_submit:hover{
+  transform: scale(1.1);
+}
+
+.outer_background{
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  min-height: 100vh;
+  align-items: center;
+  padding: 0 15px;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.925);
+  transition: opacity .5s ease-in-out;
+ opacity: 0;
+  
+}
+
+.opened{
+  width: 100%;
+  height: 100vh;
+ opacity: 1;
+}
+
+.opened_field{
+  transform:scale(1)
+}
+
+
+/* game footer */
+
+
+.game_footer{
+  width: 100%;
+  background-color:brown;
+  display: flex;
+  justify-content: center;
+  max-height: 100px;
+
+}
+
+.game_footer h1{
+  padding: 10px;
+  font-size:48px;
+  color:black;
+}
+
+/* leadership table */
+
+.table{
+  width: 80%;
+}
+
+.table th, td{
+  border:2px solid #fff;
+  margin: 0;
+  padding:8px;
+  background-color: #c7aaaa;
+}
+
+.leadership_title{
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* burger menu */
+
+.burger:hover .burger_line{
+  background-color:#fff ;
+}
+
+.burger_line{
+
+  height: 3px;
+  max-width: 100%;
+  width: 40px;
+  background-color: #000;
+  margin-top: 5px;
+}
+
+.inner_burger{
+  position: absolute;
+  top: 50;
+  
+  right:0;
+ 
+}
+
+.burger_content{
+  padding: 10px;
+  max-width:100%;
+  width: 300px;
+  max-height:100% ;
+  height: 100px;
+  background-color: brown;
+}
+
+/* media queries */
+
+@media screen and (max-width:1024px) {
+  .game_header{
+
+  }
+
+  .game_header h1{
+    font-size:2rem;
+  }
+
+  .game_header h3{
+    font-size: 1rem;
+    margin-right: 0;
+  }
+
+  .inner_bar{
+    font-size:1rem
+  }
+}
+
+@media screen and (max-width:880px){
+  .game_header h3{
+    display: none;
+  }
+}
+
+@media screen and (max-width:790px){
+  .waldo_icon{
+    max-width: 50px;
+    max-height: 50px;
+
+  }
+
+  .burger_content{
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+    
+  }
+
+  .waldo_photo{
+    margin-right: 10px;
+  }
+
+  .name_field{
+    padding: 0 30px;
+    max-width: 600px;
+    min-width: 300px;
+  }
+
+}
+
+@media screen and (max-width:620px){
+  .name_field{
+    max-width: 400px;
+  }
+
+  .button_submit{
+    margin-top:10px;
+  }
+
+  .name_field h1{
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width:500px){
+  .timer{
+    font-size: 18px;
+  }
+
+  .game_header h1{
+    font-size: 1.5em;
+  }
+
+  .item_circle{
+    max-width: 100%;
+    width: 75px;
+    height: 75px;
+  }
+
+  .cursor_div{
+    width: 50%;
+    max-width: 400px;
+    padding-right: 10px;
+  }
+
+  .cursor_div .item_text{
+    font-size: 16px;
+
+  }
+}
+
+@media screen and (max-width:450px){
+  .cursor_div .item_text{
+    font-size: 14px;
+
+  }
+
+  .name_field{
+    max-width: 150px;
+  }
+
+  .name_field h1{
+    font-size: 14px;
+  }
+
+  .name_field input{
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
