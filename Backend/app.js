@@ -13,7 +13,7 @@ const app  = express()
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.use(cors({
-    origin:["https://walldo-app-backend.vercel.app", "http://localhost:3000"]
+    origin:["https://walldo-app.vercel.app", "http://localhost:3000"]
 }));
 
 
