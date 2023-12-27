@@ -41,7 +41,7 @@ export default function Game() {
 
     useEffect(()=>{
         const handleLoadItems = async ()=>{
-            const res = await axios.get('http://localhost:5000/coordinates/get')
+            const res = await axios.get('https://walldo-app-backend.vercel.app/coordinates/get')
             const gotCoordinates = res.data.coordinates
             setImages(gotCoordinates)
             setItems(gotCoordinates)

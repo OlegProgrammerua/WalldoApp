@@ -8,7 +8,7 @@ export default function LeadershipTable() {
 
     useEffect(()=>{
         const handleLoadLeaders = async () =>{
-            const response  = await axios.get('http://localhost:5000/leader/get')
+            const response  = await axios.get('https://walldo-app-backend.vercel.app/leader/get')
             const data = response.data.leaders;
             setLeaders(data)
             console.log(leaders)

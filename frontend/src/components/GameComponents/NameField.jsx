@@ -13,7 +13,7 @@ export default function NameField({win, seconds}) {
       try{
         e.preventDefault()
         const formatTime = formatTimer(seconds)
-        const response =  axios.post('http://localhost:5000/leader/post',{
+        const response =  axios.post('https://walldo-app-backend.vercel.app/leader/post',{
           name:name,
           time:formatTime
         } )
