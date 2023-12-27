@@ -13,7 +13,7 @@ const app  = express()
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.use(cors({
-    origin:"https://walldo-app.vercel.app",
+    origin:"https://walldo-c9oncadx4-olegprogrammerua.vercel.app/game",
     methods:"GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials:true,
     optionsSuccessStatus:200
