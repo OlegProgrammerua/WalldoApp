@@ -28,6 +28,10 @@ mongoose.connect('mongodb+srv://oleh:test123@cluster0.hdlmtbj.mongodb.net/?retry
 app.use(coordinatesRouter)
 app.use(LeaderRouter)
 
+app.get("/",(req,res)=>{
+    res.send("Hello world")
+})
+
 
 app.listen(process.env.PORT, ()=>{
     console.log("The serever is running")
