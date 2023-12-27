@@ -29,7 +29,7 @@ app.use(coordinatesRouter)
 app.use(LeaderRouter)
 
 app.get("/",(req,res)=>{
-    res.send("Hello world")
+    res.json({message:"Hello world"})
 })
 
 
